@@ -53,6 +53,7 @@ var Counter1 = React.createClass({
 
 
 //The child to parent data flow
+//tu t'es arrêté à vouloir créer un nouveau composant avec btn d'incrémentation et décrémentation
 var CounterDisplay = React.createClass({
 
 });
