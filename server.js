@@ -1,9 +1,7 @@
 var path = require('path');
 var express = require('express');
 var app = express();
-var fs = require("fs");
-var axios = require ('axios');
-var nodemailer = require ('nodemailer');
+
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));

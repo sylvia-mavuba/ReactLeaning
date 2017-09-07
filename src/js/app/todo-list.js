@@ -1,30 +1,11 @@
 import React from 'react';
 
-
-
-export default class TodoList extends React.Component {
-
-    constructor(props) {
-        super(props);
+const List = props => (
+  <ul>
+    {
+      props.items.map((item, index) => <li key={index}>{item}</li>)
     }
+  </ul>
+);
 
-    render() {
-
-        function Todo ({todo}){
-            debugger
-            return (
-                <li>{todo.text}</li>
-            )
-        }
-
-        let todoList = this.props.todos.map((todo, key) => {
-            return(
-                <Todo todo={todo} key={todo.id} />
-            )
-        });
-
-        return (
-            <ul>{todoList}</ul>
-        )
-    }
-}
+export default List;

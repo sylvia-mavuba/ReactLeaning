@@ -7,8 +7,7 @@
     "build": "webpack --config webpack.config.js --progress",
     "watch": "yarn build -- --watch",
     "server": "nodemon server.js",
-    "develop": "yarn watch & yarn server",
-    "test": "jest"
+    "develop": "yarn watch & yarn server"
   },
   "author": "",
   "license": "ISC",
