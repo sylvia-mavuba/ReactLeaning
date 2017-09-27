@@ -53,12 +53,20 @@ var TodoApp = function (_React$Component) {
   _createClass(TodoApp, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      // _getData();
+      {
+        debugger;
+      }
+      (0, _dataService.getData)().then();
     }
   }, {
     key: 'updateInputValue',
     value: function updateInputValue(event) {
       this.setState({ inputValue: event.target.value });
+    }
+  }, {
+    key: 'renderView',
+    value: function renderView(dataImg) {
+      (0, _dataService.getData)(data);
     }
   }, {
     key: 'submitForm',
@@ -71,23 +79,9 @@ var TodoApp = function (_React$Component) {
       });
 
       var inputValue = this.state.inputValue;
+
       debugger;
-
-      function renderView() {
-        (0, _dataService.getData)(data).then(function () {
-          debugger;
-          (function (getData) {
-            return data;
-          });
-        });
-
-        //this.setState({dataImg: _getData(data)});
-        //console.log('fdsfsd', _getData(data));
-        /*if(inputValue === this.state.dataImg) {
-          console.log('ok')
-        }*/
-      }
-      renderView();
+      this.renderView();
     }
   }, {
     key: 'render',

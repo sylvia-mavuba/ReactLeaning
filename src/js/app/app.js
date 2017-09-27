@@ -18,14 +18,19 @@ class TodoApp extends React.Component {
   }
 
   componentDidMount() {
-   // _getData();
+    {debugger}
+   _getData().then(
+
+   );
   }
 
   updateInputValue(event)  {
     this.setState({ inputValue: event.target.value });
   };
 
-
+  renderView(dataImg) {
+    _getData(data);
+  };
 
   submitForm(event) {
     event.preventDefault();
@@ -37,22 +42,9 @@ class TodoApp extends React.Component {
 
 
     let inputValue = this.state.inputValue;
+
     debugger
-
-
-    function renderView() {
-      _getData(data).then(() => {
-        debugger
-        getData => data;
-      });
-
-      //this.setState({dataImg: _getData(data)});
-      //console.log('fdsfsd', _getData(data));
-      /*if(inputValue === this.state.dataImg) {
-        console.log('ok')
-      }*/
-    }
-    renderView();
+    this.renderView();
   };
 
   render() {
